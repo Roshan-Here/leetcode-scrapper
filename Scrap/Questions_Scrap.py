@@ -3,7 +3,7 @@ import os
 
 def scrape_leetcode_to_csv():
     """
-        Scrap all the questions
+        Scrap all the questions as csv
     """
     ls = GetQuestionsList()
     ls.scrape()  # Scrape the list of questions
