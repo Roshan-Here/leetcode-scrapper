@@ -106,6 +106,7 @@ def fall_guy(json_file_name,required_json_file_name,Error_json_data_fname):
             difficulty = question.difficulty
             # q = str(question)
             ques = f"""{question}"""
+            tags = question.topics
             problem_description = find_description(ques)
             example_data = doing_crazy_shit(ques, titelslug)
             if not example_data:
@@ -117,6 +118,7 @@ def fall_guy(json_file_name,required_json_file_name,Error_json_data_fname):
                 "slug": titelslug,
                 "description": problem_description,
                 "difficulty": difficulty,
+                "Tags": tags,
                 "examples": example_data
             }
             # print(required_json_data)
