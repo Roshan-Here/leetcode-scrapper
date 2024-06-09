@@ -76,6 +76,7 @@ def find_description(ques):
 
     # Extract the problem description lines and remove asterisks
     problem_description = '\n'.join(line.strip('*') for line in lines[1:example_start_index])
+    return problem_description
 
 
 def fall_guy(json_file_name,required_json_file_name,Error_json_data_fname):
@@ -100,7 +101,7 @@ def fall_guy(json_file_name,required_json_file_name,Error_json_data_fname):
         try:
             # print(titelslug)
             question = GetQuestion(titleSlug=titelslug).scrape()
-            time.sleep(1)
+            # time.sleep(1)
             Title = question.title
             difficulty = question.difficulty
             # q = str(question)
@@ -145,4 +146,4 @@ fall_guy(json_file_name,required_json_file_name,Error_json_data_fname)
 
 
 ########### final errored list while fetching
-# Done : Error_Fetching_data_list : ['merge-intervals', 'longest-increasing-subsequence', 'string-compression', 'maximum-length-of-repeated-subarray', 'consecutive-characters', 'neighboring-bitwise-xor', 'minimum-sum-of-values-by-dividing-array']
+# Done : Error_Fetching_data_list : ['merge-intervals', 'longest-increasing-subsequence', 'string-compression', 'maximum-length-of-repeated-subarray', 'consecutive-characters', 'left-and-right-sum-differences', 'find-the-losers-of-the-circular-game', 'neighboring-bitwise-xor', 'minimum-sum-of-values-by-dividing-array', 'find-subarray-with-bitwise-and-closest-to-k']
