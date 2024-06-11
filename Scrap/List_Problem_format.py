@@ -27,14 +27,12 @@ def fall_guy(json_file_name,required_json_file_name):
             Qid = question.QID
             Title = question.title
             difficulty = question.difficulty
-            tags = question.topics
             # q = str(question)
             required_json_data = {
                 "id":Qid,
                 "Title": Title,
                 "slug": titelslug,
                 "difficulty": difficulty,
-                "tags": tags
             }
             # print(required_json_data)
             complete_data.append(required_json_data)
